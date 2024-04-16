@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppreantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('hello',function(){
+    return("bonjour laravel");
+});
+Route::get('/appreants',[AppreantController::class, 'index']);
+Route::get('/show',[AppreantController::class,'show']);
+
